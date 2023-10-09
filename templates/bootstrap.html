@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VM Careers</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+            <img class='img-fluid' id='banner' src="http://127.0.0.1:5000/static/Black%20Modern%20Geometric%20Quotes%20Twitter%20Header%20(1).png"> 
+            <h2 class="text-center mt-2 mb-4"> About VM </h2>
+            <p class='lead'>
+            Welcome to our VM carrier website! We are a dedicated team of 
+            professionals committed to providing exceptional virtual machine (VM) 
+            solutions for businesses of all sizes. Our journey began with a vision 
+            to revolutionize the way enterprises manage their IT infrastructure.
+            As a leading VM carrier, we prioritize efficiency, reliability, and 
+            innovation to meet the evolving needs of our clients in the digital 
+            age
+            </p>
+
+            <h2 class="text-center mt-2 mb-4">
+                Open Positions
+            </h2>
+
+            <p>
+                {% for job in jobs %}
+                    {%include 'jobitem.html' %}
+                {% endfor %}
+            </p>
+
+            <div class='text-center'>
+            <button class='btn btn-primary btn-lg'>Contact Us </button>
+             <p class="mt-4">Copyright 2023 ,VM</p>
+            </div>
+
+        </div>
+    </body>
+</html>
